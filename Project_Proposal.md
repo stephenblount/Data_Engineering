@@ -1,0 +1,3 @@
+# Seattle House Price Predictor 
+
+With the rise in house prices, home owners and consumers are curious about the value of properties in their area. The project will create a web interface where the zip code, number of beds, number of baths, square footage, and lot size are taken as input and return the estimated value for a property in that area.  The data will be scraped from Realtor.com on a daily basis for the Seattle area. A simple linear regression model will be constructed for this home value predictor. The intent of this project is to work with a simple model to become more familiar with handling recurring data inputs, constructing a SQL database, using Spark to manipulate the data and train a model, building a Flask app, deploying a Flask app.
