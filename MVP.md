@@ -8,4 +8,5 @@ Currently data is being stored in an SQL database and is being updated daily wit
 Figure 1. Flow chart for project.
 
 ![](Images/model_output.png)
+
 Figure 2. Linear regression model output.
