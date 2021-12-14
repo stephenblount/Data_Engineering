@@ -16,9 +16,6 @@ sqftlot = st.sidebar.number_input("Lot Size (sqft)", min_value=100, max_value=10
 st.sidebar.write("If no lot size exists, set equal to Size of Home")
 st.sidebar.write("1 Acre = 43,560 Square Feet")
 
-# input_data = pd.DataFrame({'beds':[beds], 'baths':[baths],'sqft':[sqft], 'sqftlot':[sqftlot], 'zip':[zip_code]})
-# prediction = lr.predict(input_data)[0]
-
 conf = SparkConf()
 spark = pyspark.sql.SparkSession.builder.config(conf=conf).getOrCreate()
 lr_model = PipelineModel.load('/Models/lr')
