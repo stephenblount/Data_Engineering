@@ -1,7 +1,6 @@
 import streamlit as st
-import pandas as pd
-from pyspark.ml import PipelineModel
 import pyspark
+from pyspark.ml import PipelineModel
 st.title("Seattle House Price Predictor")
 
 zip_code = st.sidebar.selectbox("Select Zip Code", 
