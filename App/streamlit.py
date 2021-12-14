@@ -20,7 +20,7 @@ st.sidebar.write("1 Acre = 43,560 Square Feet")
 # prediction = lr.predict(input_data)[0]
 
 spark = pyspark.sql.SparkSession.builder.getOrCreate();
-lr_model = PipelineModel.load('/home/stephen/Desktop/Data_Engineering/Models/lr')
+lr_model = PipelineModel.load('/Models/lr')
 input_data = spark.createDataFrame([(beds,baths,sqft,sqftlot,zip_code)], 
                                     ["beds", "baths","sqft","sqftlot","zip"])
 
