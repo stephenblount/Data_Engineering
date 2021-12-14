@@ -1,5 +1,6 @@
 import streamlit as st
 import pyspark
+from pyspark import SparkConf
 from pyspark.ml import PipelineModel
 st.title("Seattle House Price Predictor")
 
@@ -18,7 +19,8 @@ st.sidebar.write("1 Acre = 43,560 Square Feet")
 # input_data = pd.DataFrame({'beds':[beds], 'baths':[baths],'sqft':[sqft], 'sqftlot':[sqftlot], 'zip':[zip_code]})
 # prediction = lr.predict(input_data)[0]
 
-spark = pyspark.sql.SparkSession.builder.getOrCreate();
+conf = SparkConf().setAppName("lecture-lyon2").setMaster("local")
+spark = pyspark.sql.SparkSession.builder.config(conf=conf).getOrCreate()
 lr_model = PipelineModel.load('/Models/lr')
 input_data = spark.createDataFrame([(beds,baths,sqft,sqftlot,zip_code)], 
                                     ["beds", "baths","sqft","sqftlot","zip"])
