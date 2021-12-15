@@ -1,6 +1,7 @@
 import streamlit as st
 from joblib import load
 import pandas as pd
+import pickle
 
 
 st.title("Seattle House Price Predictor")
