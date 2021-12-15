@@ -18,7 +18,7 @@ sqftlot = st.number_input("Lot Size (sqft)", min_value=100, max_value=1000000, v
 st.write("If no lot size exists, set equal to Size of Home")
 st.write("1 Acre = 43,560 Square Feet")
 
-lr_model = pickle.load(open('lr_model.pkl', 'rb'))
+lr_model = pickle.load(open('stephenblount/data_engineering/main/App/lr_model.pkl', 'rb'))
 # lr_model = load('lr_model.joblib')
 
 input_data = pd.DataFrame([(beds,baths,sqft,sqftlot,zip_code)], columns = ["beds", "baths","sqft","sqftlot","zip"])
