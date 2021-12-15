@@ -20,7 +20,7 @@ st.write("1 Acre = 43,560 Square Feet")
 
 # with open('mypickle.pickle', 'rb') as f :
 #     lr_model = pickle.load(f)
-lr_model = load('stephenblount/data_engineering/main/App/lr_model.joblib')
+lr_model = load('lr_model.joblib')
 input_data = pd.DataFrame([(beds,baths,sqft,sqftlot,zip_code)], columns = ["beds", "baths","sqft","sqftlot","zip"])
 
 lr_pred = lr_model.predict(input_data)
