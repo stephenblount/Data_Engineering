@@ -1,1 +1,0 @@
-{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1639492416297,"sparkVersion":"3.2.0","uid":"VectorAssembler_d0a7abb902ba","paramMap":{"outputCol":"features","inputCols":["beds","baths","sqft","sqftlot","encoded_zip"]},"defaultParamMap":{"handleInvalid":"error","outputCol":"VectorAssembler_d0a7abb902ba__output"}}
