@@ -18,7 +18,7 @@ st.write("If no lot size exists, set equal to Size of Home")
 st.write("1 Acre = 43,560 Square Feet")
 
 
-lr_model = load('lr_model.joblib')
+lr_model = load('https://github.com/stephenblount/Data_Engineering/blob/main/App/lr_model.joblib')
 input_data = pd.DataFrame([(beds,baths,sqft,sqftlot,zip_code)], columns = ["beds", "baths","sqft","sqftlot","zip"])
 
 lr_pred = lr_model.predict(input_data)
