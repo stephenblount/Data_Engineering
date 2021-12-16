@@ -43,10 +43,24 @@ pipe = Pipeline([('encoder', ColumnTransformer(transformers =[('enc', OneHotEnco
 #Fit pipline to traning data
 pipe.fit(X_train, y_train)
 
+#Mean Absolute Error (MAE)
+def mae(y_true, y_pred):
+    return np.mean(np.abs(y_pred - y_true)) 
+
 #Evaluate Model
 print(pipe.score(X_train, y_train))
 print(pipe.score(X_val, y_val))
 print(pipe.score(X_test, y_test))
+
+train_pred = pipe.predict(X_train)
+val_pred = pipe.predict(X_val)
+test_pred = pipe.predict(X_test)
+
+mae_train= mae(y_train, train_pred)
+mae_val= mae(y_val, val_pred)
+mae_test= mae(y_test, test_pred)
+
+print(f'mae train:{mae_train} \nmae val:{mae_val} \nmae test:{mae_test}')
 
 # Export the regressor to a file
 joblib.dump(pipe, 'lr_model.joblib')
