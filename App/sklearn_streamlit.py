@@ -14,7 +14,7 @@ zip_code = st.selectbox("Select Zip Code",
 
 beds = st.number_input("Number of Bedrooms", min_value=0, max_value=15, value=2)
 baths = st.number_input("Number of Bathrooms", min_value=1.0, max_value=10.0, value=1.0, step=0.5)
-sqft = st.number_input("Size of Home (sqft)", min_value=100, max_value=10000, value=500, step=10)
+sqft = st.number_input("Size of Home (sqft)", min_value=100, max_value=10000, value=1000, step=100)
 sqftlot = st.number_input("Lot Size (sqft)", min_value=100, max_value=1000000, value=5000, step=100)
 st.write("If no lot size exists, set equal to Size of Home")
 st.write("1 Acre = 43,560 Square Feet")
