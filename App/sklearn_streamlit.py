@@ -5,7 +5,7 @@ import pathlib
 # import pickle
 
 
-st.title("Seattle House Price Predictor")
+st.title("Seattle Home Value Predictor")
 
 zip_code = st.selectbox("Select Zip Code", 
 [98146,98122,98112,98115,98109,98136,98177,98117,98116,98199,
@@ -27,6 +27,7 @@ lr_model = load(PATH.joinpath('lr_model.joblib'))
 input_data = pd.DataFrame([(beds,baths,sqft,sqftlot,zip_code)], columns = ["beds", "baths","sqft","sqftlot","zip"])
 
 lr_pred = lr_model.predict(input_data)
-prediction = "${:,.0f}".format(lr_pred[0])
+prediction = "Predicted Home Value: ${:,.0f}".format(lr_pred[0])
 
+st.title("")
 st.header(prediction)
