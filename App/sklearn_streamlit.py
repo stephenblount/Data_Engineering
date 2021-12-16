@@ -2,7 +2,7 @@ import streamlit as st
 from joblib import load
 import pandas as pd
 import pathlib
-# import pickle
+
 
 
 st.title("Seattle Home Value Predictor")
@@ -19,7 +19,6 @@ sqftlot = st.number_input("Lot Size (sqft)", min_value=100, max_value=1000000, v
 st.write("If no lot size exists, set equal to Size of Home")
 st.write("1 Acre = 43,560 Square Feet")
 
-# lr_model = pickle.load(open('stephenblount/data_engineering/main/App/lr_model.pkl', 'rb'))
 
 PATH = pathlib.Path(__file__).parent
 lr_model = load(PATH.joinpath('lr_model.joblib'))
