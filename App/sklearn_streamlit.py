@@ -27,7 +27,7 @@ lr_model = load(PATH.joinpath('lr_model.joblib'))
 input_data = pd.DataFrame([(beds,baths,sqft,sqftlot,zip_code)], columns = ["beds", "baths","sqft","sqftlot","zip"])
 
 lr_pred = lr_model.predict(input_data)
-prediction = "Predicted Home Value: ${:,.0f}".format(lr_pred[0])
+prediction = "          Predicted Home Value: ${:,.0f}".format(lr_pred[0])
 
 st.title("")
 st.header(prediction)
