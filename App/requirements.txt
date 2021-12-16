@@ -1,3 +1,4 @@
+streamlit==0.79.0
 joblib
 pandas
 sklearn
